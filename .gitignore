@@ -13,6 +13,6 @@ pkg/
 icon/
 icon.png
 
-build.log
+build*.log
 icons/
 latest.yml

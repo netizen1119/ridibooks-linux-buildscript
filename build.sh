@@ -16,7 +16,7 @@ mkdir -p builder
     "unpack": "asar extract ../app-unpack/resources/app.asar ../asar-unpack"
   },
   "devDependencies": {
-    "electron": "^28.0.0",
+    "electron": "12.2.3",
     "@electron/packager": "^19.0.1",
     "@electron/asar": "^4.0.1"
   }
@@ -24,7 +24,7 @@ mkdir -p builder
 EOF
 )> builder/package.json
 npm i --prefix builder
-ELECTRON_VERSION="$(cat builder/node_modules/electron/package.json | grep "\"version\": " | sed 's/ *"version": "//g' | sed 's/"//g')"
+ELECTRON_VERSION="$(cat builder/node_modules/electron/package.json | grep "\"version\": " | sed 's/ *"version": "//g' | sed 's/"//g' | tr -d ',')"
 
 # unpack setup.exe
 [ -e setup-unpack ] && rm -r setup-unpack

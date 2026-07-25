@@ -38,7 +38,7 @@ for size in 16x16 32x32 48x48 64x64 128x128; do
     $SUDO cp "icons/hicolor/${size}/apps/${pkgname}.png" "${ICON_BASE}/${size}/apps/"
 done
 
-sed "s#Exec=/opt/ridibooks/Ridibooks#Exec=${APP_DIR}/Ridibooks#" ridibooks.desktop \
+sed "s#Exec=/opt/ridibooks/Ridibooks#Exec=${APP_DIR}/Ridibooks --no-sandbox --disable-gpu#" ridibooks.desktop \
     | $SUDO tee "${DESKTOP_DIR}/${pkgname}.desktop" >/dev/null
 
 echo "설치 완료. 메뉴에 안 뜨면: update-desktop-database ${DESKTOP_DIR} (시스템 설치 시에만 보통 필요)"
