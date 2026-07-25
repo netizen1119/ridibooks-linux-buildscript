@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/bash
 
 if [ -z "$pkgname" ]; then
 	pkgname="ridibooks"
