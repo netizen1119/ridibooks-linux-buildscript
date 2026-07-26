@@ -16,7 +16,7 @@ mkdir -p builder
     "unpack": "asar extract ../app-unpack/resources/app.asar ../asar-unpack"
   },
   "devDependencies": {
-    "electron": "12.2.3",
+    "electron": "^24.0.0",
     "@electron/packager": "^19.0.1",
     "@electron/asar": "^4.0.1"
   }
